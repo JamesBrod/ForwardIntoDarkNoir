@@ -11,14 +11,15 @@ public class EnemyManagerScript : MonoBehaviour {
     public GameObject bulletmanager;
     public double score = 0;
     public Text scoreText;
-    public bool gameover = false;
+    private bool gameover = true;
+    private bool gamerunning = false;
 
     public GameObject gameovertext;
 
     // Use this for initialization
     void Start ()
     {
-
+        gamerunning = false;
         bulletmanager = GameObject.FindGameObjectWithTag("BulletManager");
 
     }
@@ -26,15 +27,16 @@ public class EnemyManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if (enemies.Count < 3)
+        Debug.Log(gamerunning);
+        if (enemies.Count < 3 && gamerunning)
         {
             Spawn();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        //}
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -53,6 +55,8 @@ public class EnemyManagerScript : MonoBehaviour {
     {
         if(!gameover)
         score++;
+
+        Debug.Log(gamerunning);
     }
 
 
@@ -103,6 +107,13 @@ public class EnemyManagerScript : MonoBehaviour {
 
         //Set bullets and specials to not fire until on screen
 
+    }
+
+    public void SetGameRunning()
+    {
+        Debug.Log(gamerunning);
+        gamerunning = true;
+        Debug.Log(gamerunning);
     }
     
 }
