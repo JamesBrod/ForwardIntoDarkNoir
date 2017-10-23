@@ -1,0 +1,33 @@
+Create new bullet patterns
+
+Make more levels (scripted enemies?)
+
+Improve enemy movement
+-Enemies coming from off screen with paused shooting
+-Not getting trapped in corners
+
+New bullet types?
+-Lasers
+-Larger orbs
+
+Make the actual level generated ( for multiple players). Prefabs?
+
+Lives?
+
+Get Pause Working
+
+Limit on spellcards + GUI for Spellcards
+
+Bonus points for near misses?
+
+Work on collision detection
+
+Bosses (custom spellcards)
+
+More sprites
+
+Look into particles for projectiles (May need to use Unity 5.2, possible to use new particle system) (Use of sprites is going to be the chokepoint)
+
+Better Background
+
+Make the player character and sprites more clear (focus is only partially on player so needs to stand out. maybe an outline? Or a simple and moving background)
